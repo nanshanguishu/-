@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "大数据量批量更新", "大数据量批量更新\大数据量批量更新.csproj", "{FB5331CA-2535-49F8-978B-26025BF2F864}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB5331CA-2535-49F8-978B-26025BF2F864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB5331CA-2535-49F8-978B-26025BF2F864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB5331CA-2535-49F8-978B-26025BF2F864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB5331CA-2535-49F8-978B-26025BF2F864}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {203410DF-B34D-4C53-84BC-0D3632953558}
+	EndGlobalSection
+EndGlobal
