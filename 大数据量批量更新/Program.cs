@@ -279,5 +279,29 @@ namespace 大数据量批量更新
                 return null;
             }
         }
+
+        /// <summary>
+        /// 增量更新
+        /// </summary>
+        /// <param name="dt">更新数据表datatable形式</param>
+        /// <param name="tableName">更新的数据库表名</param>
+        /// <returns></returns>
+        protected string UpdateExistData(DataTable dt, string tableName)
+        {
+            string databaseConnectionString = string.Empty;
+            databaseConnectionString = "server=GLASSESONION;uid=sa;pwd=;database=TJPTTC"; //初始化数据库连接字符串
+            string err = string.Empty;
+            string tempTableName = string.Empty;
+            //创建临时表
+            tempTableName = CreateTempTable(databaseConnectionString, tableName);
+            //将当前数据导入到临时表中
+            SqlBulkCopyByDatatable(databaseConnectionString, tempTableName, dt);
+            //更新数据库，导入数据库中不存在的数据
+            err += GetUpdateData(databaseConnectionString, dt, tableName, tempTableName);
+            //更新数据库，更新当前数据库已经存在的数据
+            err += UpdateTableData(databaseConnectionString, tableName, tempTableName);
+            err += DropTempTable(databaseConnectionString, tempTableName);
+            return err;
+        }
     }
 }
